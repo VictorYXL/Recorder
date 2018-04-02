@@ -1,0 +1,83 @@
+环境:win10 64位
+虚拟机:Oracle VM VirtualBox5.0
+终端模拟器:Xshell_5.0
+镜像:MirantisOpenStack-6.0.iso
+
+一、准备
+关闭Windows防火墙
+
+暂停Chrome中AdBlock插件
+
+添加三段虚拟网络，删除冲突的虚拟网络
+	#2 IPv4地址:10.20.0.1，子网掩码255.255.255.0，取消DHCP服务
+	#3 IPv4地址:172.16.0.1，子网掩码255.255.255.0，取消DHCP服务
+	#4 IPv4地址:192.168.4.1，子网掩码255.255.255.0，取消DHCP服务
+	
+	
+二、安装Master节点，安装Fuel
+	创建Master虚拟机
+	类型Linux，版本Red Hat 64位
+	内存4096M，虚拟磁盘60G
+	设置->存储->光驱->添加MirantisOpenStack-6.0.iso
+	网络中，启用网卡1，连接方式Host-Only，VirtualBox Host-Only Network #2,控制芯片PCnet-PCI II (AM79C970A)，混杂模式全部允许
+	启用网卡2，连接方式Host-Only，VirtualBox Host-Only Network #3，其他默认
+	启用网卡3，连接方式Host-Only，VirtualBox Host-Only Network #4，其他默认
+	启动Master节点，等待安装完成。
+	（安装完成后关机，将内存调小至2048M）
+	
+三、创建Controller、Computer、Cinder节点
+	创建Controller节点
+	创建Controller虚拟机
+	类型Linux，版本Red Hat 64位
+	内存1024M，虚拟磁盘60G
+	设置->系统->启动顺序 网络调至首
+	网络中，启用网卡1，连接方式Host-Only，VirtualBox Host-Only Network #2,控制芯片PCnet-PCI II (AM79C970A)，混杂模式全部允许
+	启用网卡2，连接方式Host-Only，VirtualBox Host-Only Network #3,控制芯片Intel PRP/1000 MT 桌面(82540EM) ，混杂模式全部允许
+	启用网卡3，连接方式Host-Only，VirtualBox Host-Only Network #4,控制芯片Intel PRP/1000 MT 桌面(82540EM) ，混杂模式全部允许
+	
+	创建Computer节点
+	复制Controller虚拟机，初始化所有网卡的MAC地址，成为Computer虚拟机
+	将Computer虚拟机内存调至2048M，处理器个数调为2个。
+	
+	创建Cinder节点
+	复制Controller虚拟机，初始化所有网卡的MAC地址，成为Cinder虚拟机
+	
+四、部署openstack
+	进入10.20.0.2:8000，输入admin，admin进入页面。
+	
+	新建OpenStack环境：
+	使用centOS6.5版本
+	部署模式多节点，计算模式QEMU，网络模式NEUtron GRE，后端模式默认，附加服务无。
+	
+	启动Controller、Computer、Cinder虚拟机。
+	等待被发现，依次添加为Controller，Compute与Storage Cinder节点（通过MAC地址区分）
+	网络中，将CIDR从192.168.0.0/24更变为192.168.2.0/24，将DNS Server开始更改为114.114.114.114，并保存变更验证网络
+	
+	部署变更。
+	
+五、创建虚拟机
+	（关闭Master虚拟机。三个节点的开启顺寻为Controller->Computer->Cinder）
+	进入172.16.0.2，输入admin，admin进入页面。
+	
+	新建虚拟机：
+	Project->Compute->Instances，Launch Instances，
+	其中Flavor选择m1.tiny，Instances Boot Source选择Boot From Image，Image Name选择TestVM
+	networking中奖net04选为selected networks
+	
+	分配外网IP:
+	在Actions中选择Associate Floating IP，选择IP或者添加一个新IP
+	
+	修改安全权限:
+	Project->Compute->Access & Security，点击default的Manage Rules
+	添加两条规则，分别为
+	Rule:ALL ICMP ,Direction:Ingress,Remote:CIDR,CIDR:0.0.0.0/0
+	与Rule:Custom TCP Rule ,Direction:Ingress,Open Port:Port,Port:22,Remote:CIDR,CIDR:0.0.0.0/0
+	
+	增加存储:
+	Project->Compute->Volume，Create Volume
+	在Actions中点击 Edit Attachment
+	
+	
+	与Custom TCP Rule，Port 22 。
+	
+	远程登陆：登陆打开XShell，新建会话主机为虚拟机1Ip外网端口号22，用户身份验证中，用户名cirros，密码cubswin:)，并连接

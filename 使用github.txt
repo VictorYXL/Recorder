@@ -1,0 +1,37 @@
+注册：
+	https://github.com/
+新建仓库：
+	https://github.com/new
+设置生成共私钥：
+	https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+配置用户名与邮箱：
+	git config --global user.name "VictorYXL"
+	git config --global user.email hllya10@163.com
+新建git环境：
+	git init
+添加远程仓库：
+	git remote add origin git@github.com:VictorYXL/XXX.git
+从工作区添加到暂存区：
+	git add *
+从暂存区删除：
+	git rm XXX --cached
+从工作区和暂存区删除：
+	git rm XXXs
+查看暂存区内容：
+	git ls-files
+把暂存区的更改提交到版本：
+	git commit -m "XXXXXX"
+查看提交记录:
+	git log
+恢复到之前的提交：
+	git reset --hard "commit id"
+把版本区内容推送到仓库：
+	git push master
+撤销commit:
+	git reset --hard <commit_id>
+    git push origin HEAD --force
+从仓库拉去到工作区:
+	git pull
+切换到某分支:
+	git checkout xxx
+

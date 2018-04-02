@@ -1,0 +1,1 @@
+删掉C:\users\public\Documents\EFL\user.dat，然后重装EFL。

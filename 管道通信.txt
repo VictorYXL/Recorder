@@ -1,0 +1,17 @@
+cmd下
+< 表示输入（从键盘）重定向
+TaskA1.exe < input.txt
+> 表示输出（从键盘）重定向
+Task1.exe > output.txt
+|表示前面程序输出到后面程序
+Task1.exe < input.txt | Task2.exe > output.txt
+
+C中
+scanf, printf
+
+C++中
+std::cin, std::cout
+
+Python中
+sys.stdin.readlines()等
+sys.stdout.write(xxx)

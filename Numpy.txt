@@ -1,0 +1,3 @@
+ImportError: numpy.core.multiarray failed to import
+pip uninstall numpy
+pip install numpy
