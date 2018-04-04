@@ -1,0 +1,3 @@
+修改username
+	usermod --login newName oldName
+	在别的用户下

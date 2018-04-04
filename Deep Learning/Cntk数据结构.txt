@@ -1,0 +1,36 @@
+导入
+	import cntk
+	from cntk import load_model
+读写
+	读model
+	model = load_model("XXX")
+	写model
+	model.save("XXX")
+
+结构
+	函数
+	获取模型根函数 
+		model.root_function 
+	输入变量
+		function = model.root_function 
+		variable = function.arguments[0]
+	输出变量 
+		function.outputs[0]
+	参数
+		parameter = function.parameters[0]
+	特征
+		print function.attributes
+	变量
+	输出该获取变量的函数 (cntk.ops.functions.Function)
+		function = variable.owner 
+	参数
+		name shape value
+		
+导出parameter：
+	from compiler.ast import flatten 
+	import pickle
+	...
+	f = open ("XXX","wb")
+	tmp = flatten(node.parameters[0].value.tolist())
+	pickle.dump(tmp, f)
+	f.close()

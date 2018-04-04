@@ -1,0 +1,9 @@
+ssh启动、关闭、重启
+	/etc/init.d/ssh start/stop/restart
+	
+修改username
+	usermod --login newName oldName
+	在别的用户下
+	
+error while loading shared libraries: XXX.so: cannot open shared object file: No such file or directory
+	export LD_LIBRARY_PATH=......

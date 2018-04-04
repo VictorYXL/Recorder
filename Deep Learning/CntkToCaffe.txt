@@ -1,0 +1,24 @@
+全链接：
+	CNTK:times & plus -> CAFFE:InnerProduct
+	CNTK:Dense -> CAFFE:InnerProduct
+	CNTK的times中是输入*参数，而CAFFE中是参数*输入，故需要转置
+	CNTK中plus对应CAFFE里InnerProduct的Bias
+激活:
+	CNTK:ReLU  ->   CAFFE:ReLU
+	CNTK:Activate  ->   CAFFE:ReLU
+缩放：
+	CNTK:ElementTimes -> CAFFE:Scale
+卷积：
+	CNTK:convolution & plus -> CAFFE:convolution
+	CNTK:convolution -> CAFFE:convolution
+	CNTK中，获取kernel, strides 和 pad可以用，function.attributes，如果没有则需手动输入
+	CAFFE中，由conv_param获取
+	CNTK中plus层对应CAFFE；里InnerProsuct的Bias
+丢弃：
+	CNTK:Dropout -> CAFFE:Dropout
+规范化：
+	CNTK:BatchNormalization -> CAFFE:BatchNorm + Scale
+	CNTK的BN层后对数据进行缩放和偏移，故在CAFFE层后需要添加带偏移的Scale层
+	
+	For our own
+	CNTK的BN层后对数据进行缩放和偏移，放在BN层的第三个和第四个Blobs中

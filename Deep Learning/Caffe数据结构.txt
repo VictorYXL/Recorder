@@ -1,0 +1,36 @@
+读写
+	导入
+		import CAFFE.proto.CAFFE_pb2 as CAFFE
+	读model
+		model = CAFFE.NetParameter()
+		model.ParseFromString(open("XXX","rb").read())
+	写model
+		open("XXX","wb").write(model.SerializeToString())
+
+结构
+	layers
+	获取layer 
+		layer = model.layer[0]
+	输入变量
+		inputs = layer[0].bottom[0]
+	输出变量
+		outputs = layer[0].top[0]
+	参数
+		blob = layer.blobs[0]
+	特征
+		layer.xxx_parameter
+		
+导出parameter：
+	from compiler.ast import flatten 
+	import pickle
+	...
+	f = open ("XXX","wb")
+	tmp = flatten(layer.blobs[0].data)
+	pickle.dump(tmp, f)
+	f.close()
+	
+In Place:
+	CAFFE的某些层(Dropout, Scale, ReLU等)是内部处理，top和bottom一般设置成一样
+	
+Re Order:
+	CAFFE对层的顺序有严格要求，每个的blobs必须先top再bottom

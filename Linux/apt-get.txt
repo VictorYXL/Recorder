@@ -1,0 +1,18 @@
+Ubuntu中,apt-get 找不到
+	apt-get update
+	
+E: Could not get lock /var/lib/dpkg/lock - open (11 Resource temporarily unavailable)
+E: Unable to lock the administration directory (/var/lib/dpkg/) is another process using it?  
+	sudo rm /var/lib/apt/lists/lock
+	(
+	sudo rm /var/cache/apt/archives/lock
+	sudo rm /var/lib/dpkg/lock
+	)
+	
+Ubuntu 添加软件源
+	sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+设置软件不同版本优先级
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60
+	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50
+手动选择版本
+	sudo update-alternatives --config gcc

@@ -1,0 +1,29 @@
+OpenBlas
+1	Windows 下编译 OpenBlas， 需要区分 32 与 64 位，对make.exe需要使用专门的64位程序，使用mingw64中的
+	mingw32-make.exe
+	
+2	编译64位Open Blas , gcc 7.2.0 failed，目前成功的是5.4.0
+VS中导出函数 (.lib):
+	__declspec(dllexport) void Function();
+出现奇怪的unrefence:
+	可能是link的顺序
+CMake 当前路径:
+	${CMAKE_CURRENT_SOURCE_DIR}
+	
+VS build Android:
+	出现cstring， jni.h等找不到，可能是clang版本问题，Retarget to xxx
+	
+Build Sample App on Android
+Tools:
+	Visual Studio 2017 + Android Studio 3.0.1
+Steps:
+	1. Build libFaceSdk.so with VS 2017
+		a. Install VS2017 with  Mobile development with C++, Xamarin, Android NDK R13B, Android SDK setup API level(25)
+		b. Open FaceSdkCoreAndroid.sln with VS2017
+		c. Tools -> Cross Platform -> C++ -> Android, select Android SDK, Android NDK, Java SE Development Kit
+		d. Choose FaceSdkModile.Android and retarget to Android NDK r13b
+		e. Build FaceSdkModile.Android
+	2. Build sample app "Project Oxford Face API Samples" with Android Studio 
+		a. Open Core\Platforms\FaceSdkAndroid\Samples\FaceSdkMobileSample.Android with Andoird Studio
+		b. Install Android SDK including Android API 27, Cmake, LLDB, Android SDK Platfrom-Tools, Android SDK Tools, Intel x86 Emulator Accerator, NDK Android Support Repository and Google Repository (auto install with open the project)
+Connect the android modile, build the project and install it on mobile. 

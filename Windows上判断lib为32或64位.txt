@@ -1,0 +1,4 @@
+Windows上判断lib为32/64位：
+	dumpbin xxx.lib /headers (| grep machine)
+	查看dll函数
+	dumpbin xxx.lib /exports

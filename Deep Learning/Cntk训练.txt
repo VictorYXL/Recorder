@@ -1,0 +1,20 @@
+CNTK 训练Concat的BS:
+		submodel(x) = 
+		{
+			m1 = Sequential (
+            ConvolutionalLayer {32, (8:8), stride = (5:5), pad = true}
+			)(x)
+			m2 = Sequential (
+            ConvolutionalLayer {32, (8:8), stride = (5:5), pad = true} 
+			)(x)
+			out = Splice((m1:m2), axis=1)
+		}.out
+		
+        model = Sequential(
+			submodel	：
+			LinearLayer {labelDim}
+		)
+		ol = modelnew (features)
+		
+Train CNTK 时，出现EXCEPTION occurred: The training criterion is not a number (NAN).：
+	某层网络训练量过大，需要其他网络弥补
