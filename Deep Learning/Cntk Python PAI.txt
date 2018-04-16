@@ -1,0 +1,4 @@
+1. Download MKL, MKLDNN, MS-MPI, Boost, Protobuf, Cuda, SWIG, zlib and set their environment as https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#optional-anaconda-python-installation).
+2. Set python environment and CNTK_PYxx_PATH.Install numpy.
+3. Build PythonBindings and its reference in Visual Studio.
+4. pip install .whl file.

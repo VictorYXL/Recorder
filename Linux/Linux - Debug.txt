@@ -1,6 +1,0 @@
-error while loading shared libraries: XXX.so: cannot open shared object file: No such file or directory
-	export LD_LIBRARY_PATH=......
-	
-Linux Core Dump 会产生Core 文件
-	ulimit -a 查看Core文件大小
-	ulimit -c xxx(unlimited) 修改Core文件大小

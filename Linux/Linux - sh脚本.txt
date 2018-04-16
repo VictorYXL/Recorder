@@ -1,6 +1,0 @@
-Linux中执行.sh脚本，异常/bin/sh^M: bad interpreter: No such file or directory。 
-	文件格式异常
-	文件格式查看
-	:set ff or :set fileformat 
-	文件格式修改
-	:set ff=unix or :set fileformat=unix 
