@@ -1,0 +1,6 @@
+CoreLib的padding：
+	直接加在input中
+layout:
+	NHWC
+FC层前:
+	有且只有一个flatten
