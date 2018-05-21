@@ -4,3 +4,6 @@ layout:
 	NHWC
 FC层前:
 	有且只有一个flatten
+
+MSB6003	The specified task executable "cmd.exe" could not be run. The working directory "\mkl\tools" does not exist.
+	考虑用VS2015 with update 3打开

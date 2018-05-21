@@ -1,2 +1,5 @@
 adb.exe位置：
 	C:\Users\[user]\AppData\Local\Android\Sdk\platform-tools
+adb使用方法：
+	abd shell
+	ls xxxxxx
