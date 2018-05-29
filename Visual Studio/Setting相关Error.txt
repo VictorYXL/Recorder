@@ -1,3 +1,9 @@
+error C4146: unary minus operator applied to unsigned type, result still unsigned
+	C++ -> General -> SDL checks: No
+	
+Configuration Properties / C C++ / Code Generation
+Set Runtime Library to the same
+
 项目打不开，不兼容等，可能是由于
 	<Project  ToolsVersion="14.0" > 不符合
 	<PropertyGroup Label="Globals"> <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion></PropertyGroup> 不符合

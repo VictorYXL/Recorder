@@ -1,2 +1,0 @@
-Configuration Properties / C C++ / Code Generation
-Set Runtime Library to the same

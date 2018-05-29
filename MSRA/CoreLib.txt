@@ -7,3 +7,9 @@ FC层前:
 
 MSB6003	The specified task executable "cmd.exe" could not be run. The working directory "\mkl\tools" does not exist.
 	考虑用VS2015 with update 3打开
+	
+补padding的策略为：补在中间
+0 0 ... 0 0
+0 x ... x 0
+0 x ... x 0
+0 0 ... 0 0

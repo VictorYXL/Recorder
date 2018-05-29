@@ -1,0 +1,4 @@
+MKLDNN中，如果init memory descriptor出错，可能是layout需要制定
+如果不进行数据格式转换，需要强制指定数据格式为nchw
+auto pool_src_md = memory::desc(
+	{ pool_src_tz }, memory::data_type::f32, memory::format::nchw);
