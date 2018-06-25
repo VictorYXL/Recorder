@@ -1,0 +1,8 @@
+delete数组时， 使用delete[]会调用对象的析构函数，delete则不会
+new *array = new float[100];
+delete array;
+array = nullptr;
+
+new *array = new player[100];
+delete[] array;
+array = nullptr;

@@ -13,3 +13,6 @@ MSB6003	The specified task executable "cmd.exe" could not be run. The working di
 0 x ... x 0
 0 x ... x 0
 0 0 ... 0 0
+
+CoreLib中 stack around the variable 'link' was corrupted:
+	可能是由于层名太长，导致溢出

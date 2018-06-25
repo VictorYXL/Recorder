@@ -1,0 +1,2 @@
+查询为主 (in) 使用 set / dict
+大程序使用pypy http://pypy.org/

@@ -47,3 +47,5 @@ add_library (xxx shared "${SOURCES}")
 #endif
 
 XXX_API void function(xxxx);
+
+cmake "Visual Studio 15 2017 Win64" .. 

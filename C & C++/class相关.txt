@@ -1,0 +1,15 @@
+返回非基本参数类型时，将函数定为const函数，并考虑传引用，如
+const std::string& get_name() const
+{
+	return name;
+}
+
+传对象，返回对象，或者赋值对象，都会调用构造函数创建新的对象，所以要对对象修改时使用引用&
+for (auto tensor : tensor_list)
+{
+	//对tensor的修改不会影响tensor_list的值
+}
+for (auto& tensor : tensor_list)
+{
+	//会影响tensor_list的值
+}

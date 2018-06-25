@@ -26,7 +26,7 @@
 	git reset --hard "commit id"
 	
 把版本区内容推送到仓库：
-	git push origin xxxbranch
+	git push origin xxx_branch
 	
 撤销commit:
 	git reset --hard <commit_id>
@@ -40,3 +40,21 @@
 
 升级子模块：
 	git submodule update --init --recursive 
+
+修改message:
+	修改最新提交, git commit -amend
+	修改之前提交, 
+		git rebase -i commit-id
+		pick->reword
+	
+	
+合并commit:
+	git rebase -i commit-id (begin id)
+	pick 保留的commit
+	square 合并改commit，保留message
+	fixup 合并该commit，删除message
+	如果有冲突，需要fix conflict 
+	https://blog.csdn.net/itfootball/article/details/44154121
+	
+回滚单个文件
+	git reset commit-id file
