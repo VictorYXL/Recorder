@@ -40,3 +40,6 @@
 
 升级子模块：
 	git submodule update --init --recursive 
+	
+git中文名支持:
+	git config --global core.quotepath false

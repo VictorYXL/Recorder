@@ -1,0 +1,3 @@
+项目打不开，不兼容等，可能是由于
+	<Project  ToolsVersion="14.0" > 不符合
+	<PropertyGroup Label="Globals"> <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion></PropertyGroup> 不符合
