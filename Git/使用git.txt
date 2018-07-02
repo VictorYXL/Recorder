@@ -58,3 +58,6 @@
 	
 回滚单个文件
 	git reset commit-id file
+	
+git中文名支持:
+	git config --global core.quotepath false

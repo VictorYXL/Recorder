@@ -13,3 +13,14 @@ for (auto& tensor : tensor_list)
 {
 	//会影响tensor_list的值
 }
+
+C++栈上创建对象，会在语句结束时析构，如
+if (xx)
+{
+	Class1 A;
+	xxxx
+}
+if结束后A析构
+
+在类中申请的空间要小心。
+比如复制后，会引用相同空间，所以考虑在拷贝构造函数中修改。

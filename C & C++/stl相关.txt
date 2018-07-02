@@ -1,2 +1,9 @@
 创建对象为key的map时，需要重载<，或者编写对比函数
 map等stl对象赋值时，可能会调用无参数的构造函数
+
+vector等替换元素，使用迭代器，如
+auto& origin = vec.begin() + index;
+*origin = new_object;
+
+vector插入
+vec.insert(vec.begin()+index, new_object);
