@@ -1,0 +1,7 @@
+In Place:
+	caffe的某些层(Dropout, Scale, ReLU等)是内部处理，top和bottom一般设置成一样
+	
+Re Order:
+	caffe对层的顺序有严格要求，每个的blobs必须先top再bottom
+	
+layer的名字对模型有影响，要保证prototxt和caffemodel的layer名字一致
