@@ -1,0 +1,9 @@
+thread test( function, parameter_list);
+创建的时候就开始执行
+
+加入主线程有两种方法
+test执行完之前主线程都阻塞
+test.join();
+
+test执行与主线程无关
+test.datain();

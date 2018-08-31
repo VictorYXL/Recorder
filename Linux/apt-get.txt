@@ -16,3 +16,4 @@ Ubuntu 添加软件源
 	sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50
 手动选择版本
 	sudo update-alternatives --config gcc
+	

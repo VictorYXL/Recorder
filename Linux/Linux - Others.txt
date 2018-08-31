@@ -4,3 +4,13 @@ Linux中执行.sh脚本，异常/bin/sh^M: bad interpreter: No such file or dire
 	:set ff or :set fileformat 
 	文件格式修改
 	:set ff=unix or :set fileformat=unix 
+	
+Could not find the 'zip' archiver, please install it using your system package manager.
+	sudo apt-get install zip
+	
+ninja:
+die: error: must run as root
+重装ninja
+git clone git://github.com/ninja-build/ninja.git && cd ninja
+git checkout release
+./configure.py --bootstrap
