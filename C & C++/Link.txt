@@ -1,0 +1,2 @@
+can't link ___chkstk_ms:
+	可能是系统分配栈空间不足
