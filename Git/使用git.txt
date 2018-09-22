@@ -61,3 +61,7 @@
 	
 git中文名支持:
 	git config --global core.quotepath false
+
+fatal: the remote end hung up unexpectedly （curl 56 OpenSSL SSL_read:SSL_ERROR_sysCALL）
+	git缓存不够
+	git config http.postBuffer 524288000
