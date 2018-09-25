@@ -1,0 +1,7 @@
+修改username
+	在别的用户下
+	usermod --login newName oldName
+
+创建用户
+	adduser xxx
+	passwd xx

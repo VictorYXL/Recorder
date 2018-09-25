@@ -1,6 +1,0 @@
-ssh启动、关闭、重启
-	/etc/init.d/ssh start/stop/restart
-	
-修改username
-	usermod --login newName oldName
-	在别的用户下

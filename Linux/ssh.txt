@@ -1,0 +1,6 @@
+Could not load host key: xxx
+缺少密钥，生成
+sudo ssh-keygen -t xxx -f /etc/ssh/ssh_host_xxx_key
+
+ssh启动、关闭、重启
+	/etc/init.d/ssh start/stop/restart
