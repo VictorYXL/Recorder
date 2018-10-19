@@ -1,3 +1,0 @@
-使用额外的MKL库，需要mkl_core.lib mkl_intel_ilp64.lib mkl_intel_thread.lib 和 libiomp5md.lib （此为静态编译，动态编译中前三项为_dll.lib）
-CAFFE中，目标项目的Link Input中删除libopenblas.dll.a，添加四个MKL库，预处理中添加USE_MKL，Include目录中添加D:\CNTK\CNTKCustomMKL\3\include
-CNTK中，配置环境变量，将CNTK.Cpp.props中的MathLinkLibrary替换为四个MKL库，删除cntk_mkl_p.dll等，重新编译整个项目。

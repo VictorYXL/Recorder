@@ -1,6 +1,0 @@
-创建Conda环境
-conda create --name Python python=2.7 numpy scipy h5py jupyter
-activate Python27
-把PYTHONPATH从环境变量去掉
-pip install cntk scikit-skimage.io protobuf
-

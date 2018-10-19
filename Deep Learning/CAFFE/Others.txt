@@ -5,3 +5,6 @@ Re Order:
 	caffe对层的顺序有严格要求，每个的blobs必须先top再bottom
 	
 layer的名字对模型有影响，要保证prototxt和caffemodel的layer名字一致
+
+使用额外的MKL库，需要mkl_core.lib mkl_intel_ilp64.lib mkl_intel_thread.lib 和 libiomp5md.lib （此为静态编译，动态编译中前三项为_dll.lib）
+CAFFE中，目标项目的Link Input中删除libopenblas.dll.a，添加四个MKL库，预处理中添加USE_MKL，Include目录中添加D:\CNTK\CNTKCustomMKL\3\include

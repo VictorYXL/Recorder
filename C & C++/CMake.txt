@@ -49,3 +49,6 @@ add_library (xxx shared "${SOURCES}")
 XXX_API void function(xxxx);
 
 cmake "Visual Studio 15 2017 Win64" .. 
+
+CMake was unable to find a build program corresponding to "Ninja".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+	apt-get install ninja-build

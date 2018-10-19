@@ -1,0 +1,1 @@
+Caffe -> Onnx 每个BN后面添加Scale层、Average默认计算padding
