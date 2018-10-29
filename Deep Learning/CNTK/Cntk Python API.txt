@@ -2,3 +2,6 @@
 2. Set python environment and CNTK_PYxx_PATH.Install numpy.
 3. Build PythonBindings and its reference in Visual Studio.
 4. pip install .whl file.
+
+ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.
+	缺少某些dll，在cntk->libs中，比如cudart64_90.dll等

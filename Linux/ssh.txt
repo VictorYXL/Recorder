@@ -4,3 +4,7 @@ sudo ssh-keygen -t xxx -f /etc/ssh/ssh_host_xxx_key
 
 ssh启动、关闭、重启
 	/etc/init.d/ssh start/stop/restart
+
+连接出现no supported authentication methods available：
+	需要设置 PasswordAuthentication 
+	将/etc/ssh/sshd_config中PasswordAuthentication no 改为 yes.
