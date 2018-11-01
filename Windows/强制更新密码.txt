@@ -1,0 +1,2 @@
+1 用管理员身份打开cmd
+2 net user "%UserName%"  XXX
