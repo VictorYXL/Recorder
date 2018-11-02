@@ -1,0 +1,2 @@
+出现rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+	关闭WSL和VS，删除.vs文件夹，重启WSL，再重启VS
