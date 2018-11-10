@@ -1,0 +1,5 @@
+git@github.com: Permission denied (publickey).
+	密钥没有添加到github上。
+	产生密钥 ssh-keygen -t rsa
+	公钥地址(默认) C:\Users\admin/.ssh/id_rsa
+	添加到github中  https://github.com/settings/keys

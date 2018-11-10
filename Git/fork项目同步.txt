@@ -1,0 +1,6 @@
+1、进入fork的项目
+2、添加源项目地址 git remote add origin_repos_alias_name git@xxx(源项目地址)
+3、核实 git remote -v
+4、更新源项目分支到本地 git fetch origin_repos_alias_name
+5、合并 git merge origin_repos_alias_name/master
+6、提交 git push origin master
