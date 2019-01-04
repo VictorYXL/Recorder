@@ -34,3 +34,9 @@
 	tmp = flatten(node.parameters[0].value.tolist())
 	pickle.dump(tmp, f)
 	f.close()
+	
+layout:
+	Tensor的layout为NCHW
+	Conv层，kernel为NCHW
+	Times层，kernel为CHWN
+	

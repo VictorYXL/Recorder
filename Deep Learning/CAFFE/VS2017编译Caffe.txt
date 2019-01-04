@@ -1,0 +1,39 @@
+1 清理之前缓存
+	删除 C:\Users\[user]\.caffe 文件夹
+
+2 获取代码
+	git clone https://github.com/BVLC/caffe.git
+	cd caffe
+	git checkout windows
+
+3 确定MSVC与目标Python版本
+	假定MSVC = 1915与Python = 3.5
+
+4 修改scripts\build_win.cmd
+	70到99行修改
+	包括MSVC_VERSION、WITH_NINJA、CPU_ONLY、PYTHON_VERSION、BUILD_PYTHON等参数
+	112行加入
+	if "%MSVC_VERSION%"=="15" (
+		set CMAKE_GENERATOR=Visual Studio 15 2017 Win64
+	)
+	158行修改
+	set batch_file=vcvars64.bat的绝对路径，如
+	set batch_file=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build
+	
+5 修改WindowsDownloadPrebuiltDependencies.cmake
+	14行添加
+	set(DEPENDENCIES_URL_1915_35 	"${DEPENDENCIES_URL_BASE}/v${DEPENDENCIES_VERSION}/${DEPENDENCIES_NAME_1900_35}${DEPENDENCIES_FILE_EXT}")
+	set(DEPENDENCIES_SHA_1915_35 "f060403fd1a7448d866d27c0e5b7dced39c0a607")
+	其他配置参考1900
+
+6 scripts\build_win.cmd 失败
+
+7 修改OpenCVConfig.cmake
+	C:\Users\[user]\.caffe\dependencies\libraries\OpenCVConfig.cmake
+	第86行加入
+	elseif(MSVC_VERSION EQUAL 1915)
+		set(OpenCV_RUNTIME vc14)
+8 修改修改nvcc.hpp
+	C:\Users\[user]\.caffe\dependencies\libraries\include\boost-1_61\boost\config\compiler\nvcc.hpp
+	更新nvcc.hpp
+	

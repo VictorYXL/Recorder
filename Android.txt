@@ -1,0 +1,15 @@
+有写权限：
+	/sdcard/Documents/
+adb.exe位置：
+	Anroid SDK\platform-tools
+adb使用方法：
+	abd shell
+	ls xxxxxx
+
+VS + Android Studio:
+	1 使用Android Studio的SDK与NDK，需要在Android Studio Tools -> SDK managers SDK Platfroms中下载SDK，SDK Tools中下载NDK
+	2 在VS Tools -> Options -> Cross Platform -> C++ -> Android 中设置对应的SDK与NDK
+
+Android Studio： The C/C++ compiler "xxxx" is not able to compile a simple test program.
+	Build -> Refresh Linked C++ Projects
+	

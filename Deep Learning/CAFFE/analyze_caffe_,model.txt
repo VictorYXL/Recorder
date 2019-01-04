@@ -1,0 +1,40 @@
+1 创建项目 + 代码
+2 References: caffe caffeproto
+3 Include Directories:
+    ..\build
+    ..\build\include
+    ..\include
+    C:\Users\Administrator\.caffe\dependencies\libraries\include\boost-1_61
+    C:\Users\Administrator\.caffe\dependencies\libraries\Include\opencv
+    C:\Users\Administrator\.caffe\dependencies\libraries\include
+4 Dependencies:
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_system-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_thread-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_filesystem-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_chrono-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_date_time-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_atomic-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\glog.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\Lib\gflags.lib
+    shlwapi.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\libprotobuf.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\caffehdf5_hl.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\caffehdf5.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\cmake\..\lib\caffezlib.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\lmdb.lib
+    ntdll.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\leveldb.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\cmake\..\lib\boost_date_time-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\cmake\..\lib\boost_filesystem-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\cmake\..\lib\boost_system-vc140-mt-1_61.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\snappy_static.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\caffezlib.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\x64\vc14\lib\opencv_highgui310.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\x64\vc14\lib\opencv_imgcodecs310.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\x64\vc14\lib\opencv_imgproc310.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\x64\vc14\lib\opencv_core310.lib
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\libopenblas.dll.a
+    C:\Users\Administrator\.caffe\dependencies\libraries\lib\boost_python-vc140-mt-1_61.lib
+    D:\Software\Anaconda\envs\Python35\libs\python35.lib
+5 Preprocessor Definitions:
+    BOOST_ALL_NO_LIB;CPU_ONLY;
