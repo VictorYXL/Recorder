@@ -1,2 +1,5 @@
 can't link ___chkstk_ms:
 	可能是系统分配栈空间不足
+error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in 
+	项目与依赖项目的Debug Level不同，
+	调整Debug Level：Configuration Properties -> C++ -> Code Generation -> Runtime Library
