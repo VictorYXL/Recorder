@@ -1,0 +1,7 @@
+git config --add varib variable_name value
+?xxx matched more than one remote tracking branch.
+...
+If you'd like to always have checkouts of an ambiguous <name> prefer
+one remote, e.g. the 'origin' remote, consider setting
+checkout.defaultRemote=origin in your config.
+git config --add checkout.defaultRemote origin
