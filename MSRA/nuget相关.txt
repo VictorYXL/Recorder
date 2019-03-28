@@ -1,0 +1,13 @@
+添加本地NuGet：
+    Tools -> NuGet Package Manager -> Package Manager Setting -> Package Source -> Add (Source: Local address)
+
+NuGet包的内容：
+    在packages里能找到dll与.h文件
+
+C++引用NuGet：
+    Build Dependencies -> Build Customizations
+    引用时直接#include<xxx>
+
+C#引用NuGet:
+    安装时要保证.Net Framework的依赖（平台有对应的.Net Framework + 程序选择对应的.Ne Framework，在Application的Target framework中选择）
+    添加对应的References
