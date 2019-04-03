@@ -1,0 +1,7 @@
+切换到某分支:
+	git checkout xxx
+
+查看是否合并到当前branch:
+    git branch (-a) --merged
+    git branch (-a) --no-merged
+

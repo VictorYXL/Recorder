@@ -3,3 +3,11 @@ git@github.com: Permission denied (publickey).
 	产生密钥 ssh-keygen -t rsa
 	公钥地址(默认) C:\Users\admin/.ssh/id_rsa
 	添加到github中  https://github.com/settings/keys
+
+git config --add varib variable_name value
+xxx matched more than one remote tracking branch.
+...
+If you'd like to always have checkouts of an ambiguous <name> prefer
+one remote, e.g. the 'origin' remote, consider setting
+checkout.defaultRemote=origin in your config.
+git config --add checkout.defaultRemote origin

@@ -11,3 +11,14 @@ C++引用NuGet：
 C#引用NuGet:
     安装时要保证.Net Framework的依赖（平台有对应的.Net Framework + 程序选择对应的.Ne Framework，在Application的Target framework中选择）
     添加对应的References
+    
+Face组内：
+    C++引用Face.Native
+    C#引用Face.DotNet
+    
+上传：
+    https://msrasia.visualstudio.com/FaceNExT/_packaging?_a=feed&feed=Official
+    选择Package，Connect to feed
+    对小的nuget包，nuget.exe push -Source https://****.json(URL) -ApiKey AzureDevOps XXXX.nupkg
+    对于大的negut包 VstsNuGetPush.exe XXXX.nupkg -feed https://****.json(URL) 
+    (参考https://www.1eswiki.com/wiki/VstsNuGetPush.exe)
