@@ -1,7 +1,14 @@
+Build cntk python whl:
 1. Download MKL, MKLDNN, MS-MPI, Boost, Protobuf, Cuda, SWIG, zlib and set their environment as https://docs.microsoft.com/en-us/cognitive-toolkit/Setup-CNTK-on-Windows#optional-anaconda-python-installation).
 2. Set python environment and CNTK_PYxx_PATH.Install numpy.
 3. Build PythonBindings and its reference in Visual Studio.
 4. pip install .whl file.
 
+缺少dll:
 ImportError: DLL load failed: A dynamic link library (DLL) initialization routine failed.
-	缺少某些dll，在cntk->libs中，比如cudart64_90.dll等
+	缺少gpu相关库，如cudart64_90.dll等
+可以load_model但不能eval(inference):
+	缺少mkl与opencv库，需要mklml.dll、mkldnn.dll、libiomp5md.dll、opencv_world310.dll
+mkl err(-1):
+	mklml.dll库版本不正确
+在环境变量或者anaconda\envs\xxx_environment\Lib\site-packages\cntk\libs中添加对应库，可先在别的环境里install官方cntk来下载dll
