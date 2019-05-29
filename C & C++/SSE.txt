@@ -1,0 +1,5 @@
+inlining failed in call to always_inline 'xxx': target specific option mismatch
+	SSE优化指令集编译错误，需要在项目中添加指令集
+	如需要添加添加msse4：
+		MSBuild中 <AdditionalOptions>-msse4 %(AdditionalOptions)</AdditionalOptions>
+		cmake中 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4")

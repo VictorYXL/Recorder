@@ -51,4 +51,12 @@ XXX_API void function(xxxx);
 cmake "Visual Studio 15 2017 Win64" .. 
 
 CMake was unable to find a build program corresponding to "Ninja".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
+没有装Ninja
+	Linux上：
 	apt-get install ninja-build
+	Windows上：
+	git clone https://github.com/ninja-build/ninja.git
+	git checkout release 
+	用x86_x64 Cross Tools Command Prompt for VS 2017打开，python configure.py --bootstrap
+	把ninja.exe放入环境变量
+	

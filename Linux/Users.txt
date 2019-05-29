@@ -5,3 +5,9 @@
 创建用户
 	adduser xxx
 	passwd xx
+	
+xxx is not in the sudoers file. This incident will be reported.
+xxx没有sudi权限：
+	切到root用户，执行visudo
+	在root ALL=(ALL) ALL下面添加 xxx ALL=(ALL) ALL
+	保存 Esc + X

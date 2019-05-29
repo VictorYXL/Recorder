@@ -1,0 +1,11 @@
+员工号: 1246106
+座位号: 12128
+PIN码: 727538
+
+alias: xianya
+密码: ZYPwan_20190321
+Bit_Locker: ZYPwan_727538
+
+
+
+Stock username: VictorYang1994

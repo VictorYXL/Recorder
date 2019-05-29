@@ -1,0 +1,28 @@
+远程登录配置不正确： 
+    可能的原因是没有安装Remote Access
+        Server Manager -> Manage -> Add Reols and Features
+        Roled-base or feature-based installation
+        Server Roles 中  Remote Access -> DirectAccess and VPN(RAS)
+    可能是由于设置不正确
+        run gpedit.msc
+        Computer Configuration -> Administration Templates -> Windows Components -> Remote Desktop Services -> Remote Desktop Session Host -> Licensing -> 
+                                Using the specified Remote Desktop license servers: Enable, 且 Licenses servers to use 设为127.0.0.1
+                                Set the Remote Desktop license mode: Enable, 且设为Per User
+
+管理添加License， 需要
+    安装Remote Desktop Licensing Manager:
+        Server Manager -> Manage -> Add Reols and Features
+        Roled-base or feature-based installation
+        Server Roles 中 Remote Desktop Services -> Remote Desktop Licensing + Remote Desktop Session Host
+        Features 中 Remote Server Administration Tools -> Remote Desktop Service Tools -> Remote Desktop Licensing Tools + Remote Desktop Licensing Diagnoser Tools
+    添加License:
+        获取License https://my.visualstudio.com/ProductKeys
+        Server Manager -> Tools -> Remote Desktop Services -> Remote Desktop Licensing Manager
+        选中Server, Properties, Required Infomation: 不重要随便写
+        Windows Server 2016 -> install Licenses, Licenses program -> Licenses Pack (Retail Purchase)
+        输入获取的License, 安装完成
+
+突破服务器登陆两个人的限制：
+    run gpedit.msc
+    Computer Configuration -> Administration Templates -> Windows Components -> Remote Desktop Services -> Connections -> Limit number of connections: Enable且设为更大的数
+
