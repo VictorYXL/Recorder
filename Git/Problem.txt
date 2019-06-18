@@ -1,0 +1,3 @@
+Encountered X file(s) that should have been pointers, but weren't:
+	LFS BUG
+	git lfs uninstall && git status && git lfs install

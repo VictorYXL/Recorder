@@ -15,20 +15,22 @@ link_directories("/home/v-xianly/projects/NNPACK/lib/")
 
 # Add the executable
 add_executable(BenchmarkTool ${DIR_SRCS})
+
+# Link library
 target_link_libraries (BenchmarkTool libnnpack.a libcpuinfo.a libpthreadpool.a libpthread.so)
 
 
 
 
-#Build lib
-add_library (xxx "${SOURCES}")
+#Build static lib
+add_library (xxx STATIC "${SOURCES}")
 
-#Build dll
-add_library (xxx shared "${SOURCES}")
+#Build dynamic lib
+add_library (xxx SHARED "${SOURCES}")
 
-#Build dll + lib 
+#Build static + dynamic lib 
 add_definitions(-DBUILD_LIBRARY)
-add_library (xxx shared "${SOURCES}")
+add_library (xxx SHARED "${SOURCES}")
 .h file:
 #if defined(_MSC_VER)
 # if defined(BUILD_LIBRARY)
@@ -48,7 +50,6 @@ add_library (xxx shared "${SOURCES}")
 
 XXX_API void function(xxxx);
 
-cmake "Visual Studio 15 2017 Win64" .. 
 
 CMake was unable to find a build program corresponding to "Ninja".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.
 没有装Ninja

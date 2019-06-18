@@ -6,7 +6,7 @@ PC full name: MININT-GEH0RT6.fareast.corp.microsoft.com
 Ubuntu
 root: Ubuntu
 root password: Ubuntu17.10
-ip: 10.172.141.67
+ip: 10.172.141.106
 
 WSL
 IP: 10.172.140.95

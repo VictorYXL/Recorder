@@ -1,0 +1,5 @@
+默认位置：
+	C:\Windows\py.exe
+根据注册表信息找python
+注册表信息在：
+	Software\\Python\\Pythoncore中。
