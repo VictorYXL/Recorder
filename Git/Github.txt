@@ -4,7 +4,7 @@
 新建仓库：
 	https://github.com/new
 	
-设置生成共私钥：
+设置生成公私钥：
 	https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 	
 配置用户名与邮箱：

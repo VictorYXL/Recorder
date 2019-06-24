@@ -1,0 +1,14 @@
+can't link ___chkstk_ms:
+	可能是系统分配栈空间不足
+error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in 
+	项目与依赖项目的Debug Level不同，
+	调整Debug Level：Configuration Properties -> C++ -> Code Generation -> Runtime Library
+
+inlining failed in call to always_inline 'xxx': target specific option mismatch
+	SSE优化指令集编译错误，需要在项目中添加指令集
+	如需要添加添加msse4：
+		MSBuild中 <AdditionalOptions>-msse4 %(AdditionalOptions)</AdditionalOptions>
+		cmake中 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse4")
+
+编译静态库时，不链接所需的静态库或动态库，而是向下传递。
+编译动态库时，集成所需的静态库

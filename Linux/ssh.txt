@@ -8,3 +8,11 @@ ssh启动、关闭、重启
 连接出现no supported authentication methods available：
 	需要设置 PasswordAuthentication 
 	将/etc/ssh/sshd_config中PasswordAuthentication no 改为 yes.
+
+Ubuntu 18.04下固定主机名:
+	需要cloud-init: sudo apt-get install cloud-init
+	修改hostname: sudo vim /ect/hostname
+	修改映射: sudo vim /ect.hosts 添加访问ip + hostname, 如10.172.141.78 xianya-ubuntu
+	固定映射: sudo vim /etc/cloud/cloud.cfg, preserve_hostname: false -> preserve_hostname: true
+	重启server: /etc/init.d/networking restart 
+	重启电脑

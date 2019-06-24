@@ -1,3 +1,14 @@
+git中文名支持:
+	git config --global core.quotepath false
+
+fatal: the remote end hung up unexpectedly （curl 56 OpenSSL SSL_read:SSL_ERROR_sysCALL）
+	git缓存不够
+	git config http.postBuffer 524288000
+
+Encountered X file(s) that should have been pointers, but weren't:
+	LFS BUG
+	git lfs uninstall && git status && git lfs install
+	
 git@github.com: Permission denied (publickey).
 	密钥没有添加到github上。
 	产生密钥 ssh-keygen -t rsa

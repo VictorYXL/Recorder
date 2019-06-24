@@ -1,33 +1,37 @@
 CMakeLists.txt Demo:
-cmake_minimum_required (VERSION 2.6)
-project (BenchmarkTool)
- 
-# Add the header
-include_directories(include)
-include_directories(/home/v-xianly/projects/NNPACK/include)
-include_directories(/home/v-xianly/projects/NNPACK/deps/pthreadpool/include)
+	cmake_minimum_required (VERSION 3.11)
+	project (XXXX)
 
-# Add the source
-aux_source_directory(./src DIR_SRCS)
+	# Add definition
+	add_definitions(-DXXXX)
 
-# Add the libraries
-link_directories("/home/v-xianly/projects/NNPACK/lib/")
+	# Add the include directories
+	include_directories(/path/to/include)
 
-# Add the executable
-add_executable(BenchmarkTool ${DIR_SRCS})
+	# Add the source to a variable
+	file(GLOB_RECURSE SOURCE "path/to/source/*.cpp")
+	or others like list 
 
-# Link library
-target_link_libraries (BenchmarkTool libnnpack.a libcpuinfo.a libpthreadpool.a libpthread.so)
+	# Add libraries directories
+	link_directories("path/to/library")
 
+	# Create app or lib
+	add_executable(app ${SOURCE})
+	add_library(static_lib STATIC ${SOURCE})
+	add_library(dynamic_lib SHARED ${SOURCE})
 
+	# Link dependences libraries (For static lib, it will not linked)
+	target_link_libraries(app/lib lib_1 lib_2)
 
-
+<<<<<<< HEAD
+=======
 #Build static lib
 add_library (xxx STATIC "${SOURCES}")
 
 #Build dynamic lib
 add_library (xxx SHARED "${SOURCES}")
 
+>>>>>>> 357f1d5... 20190618
 #Build static + dynamic lib 
 add_definitions(-DBUILD_LIBRARY)
 add_library (xxx SHARED "${SOURCES}")
