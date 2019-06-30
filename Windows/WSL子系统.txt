@@ -1,2 +1,6 @@
 Installing, this may take a few minutes... WslRegisterDistribution failed with error: 0x800703fa
 	重启LXSSManager
+
+子系统打开ssh，能ping通但不能连接：
+	通过powershell 检查 Get-Service -Name ssh*
+	关闭sshproxy和sshbroker

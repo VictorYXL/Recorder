@@ -1,7 +1,8 @@
 修改username
 	在别的用户下
 	usermod --login newName oldName
-
+修改密码:
+	sudo passwd user(user 是对应的用户名) 
 创建用户
 	adduser xxx
 	passwd xx
