@@ -11,8 +11,8 @@ ssh启动、关闭、重启
 
 Ubuntu 18.04下固定主机名:
 	需要cloud-init: sudo apt-get install cloud-init
-	修改hostname: sudo vim /ect/hostname
-	修改映射: sudo vim /ect/hosts 添加访问ip + hostname, 如10.172.141.78 xianya-ubuntu
+	修改hostname: sudo vim /etc/hostname
+	修改映射: sudo vim /etc/hosts 添加访问ip + hostname, 如10.172.141.78 xianya-ubuntu
 	固定映射: sudo vim /etc/cloud/cloud.cfg, preserve_hostname: false -> preserve_hostname: true
 	重启server: /etc/init.d/networking restart 
 	重启电脑
