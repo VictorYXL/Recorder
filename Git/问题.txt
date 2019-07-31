@@ -22,3 +22,9 @@ If you'd like to always have checkouts of an ambiguous <name> prefer
 one remote, e.g. the 'origin' remote, consider setting
 checkout.defaultRemote=origin in your config.
 git config --add checkout.defaultRemote origin
+
+Encountered xxx file(s) that should have been pointers, but weren't:
+	git lfs uninstall
+	git reset --hard
+	git lfs install
+	git lfs pull

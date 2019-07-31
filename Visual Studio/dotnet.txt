@@ -1,0 +1,5 @@
+Unhandled Exception: System.BadImageFormatException: Could not load file or assembly 
+	C#项目里可能是x86 x64 版本不一致，Build Platform target里选择正确平台，注意AnyCPU与 Prefer 32-bit
+
+添加System引用集:
+	需要保证，使用运行时环境clr
