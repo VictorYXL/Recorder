@@ -3,3 +3,6 @@ Test
 
 Debug跳不进去
 Enable native code debugging
+
+error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' xxx:
+	Configuration Properties -> C/C++ -> Code Generation -> Runtime Library -> /MD
