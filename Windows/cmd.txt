@@ -1,0 +1,3 @@
+别名设置:
+	doskey alias=command $*
+	如 doskey python=D:\Software\anaconda\envs\Python36\python.exe $*
