@@ -1,9 +1,0 @@
-import hmac
-import hashlib
-
-value = xxxxx 	# 加密值
-key = xxxxx		# 加密密钥
-hash = hashlib.sha256() 		# 算法
-hash.update(key.encode("utf-8"))
-hash.digest()	# 以binary data形式返回
-#hash.hexdigesam()	# 以十六进制形式返回

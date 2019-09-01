@@ -1,0 +1,8 @@
+Conda & PYTHONPATH：
+	环境中的Lib->site-packages相当于PYTHONPATH，
+	如Anaconda\envs\Python36\Lib\site-packages，import时会搜索文件夹
+
+py.exe:
+	作用: 根据注册表信息找python
+	默认位置: C:\Windows\py.exe
+	注册表信息在: Software\\Python\\Pythoncore中。
