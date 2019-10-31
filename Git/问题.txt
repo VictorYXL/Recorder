@@ -23,6 +23,11 @@ one remote, e.g. the 'origin' remote, consider setting
 checkout.defaultRemote=origin in your config.
 git config --add checkout.defaultRemote origin
 
+git status 很慢:
+	可能由于submodule获取慢，
+	忽略submodule: git status --ignore-submodules
+	忽略submodule的变化: git status --ignore-submodules=dirty
+
 Encountered xxx file(s) that should have been pointers, but weren't:
 	git lfs uninstall
 	git reset --hard

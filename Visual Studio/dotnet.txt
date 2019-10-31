@@ -3,3 +3,6 @@ Unhandled Exception: System.BadImageFormatException: Could not load file or asse
 
 添加System引用集:
 	需要保证，使用运行时环境clr
+
+The current .NET SDK does not support targeting .NET Standard 2.0.  Either target .NET Standard 1.6 or lower, or use a version of the .NET SDK that supports .NET Standard 2.0.
+	Dotnet 版本不对，dotnet --list-sdks可以查看，建议使用2.1.508. https://dotnet.microsoft.com/download/dotnet-core/2.1
