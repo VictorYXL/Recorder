@@ -1,0 +1,2 @@
+strong name验证，使用VS内部的sn.exe
+证书验证，使用signtool.exe

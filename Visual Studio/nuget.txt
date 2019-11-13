@@ -1,0 +1,5 @@
+推送超过500M的Nuget包:
+    内部工具 https://www.1eswiki.com/wiki/VstsNuGetPush.exe
+    nuget sources add -name 1esPackaging -source https://1essharedassets.pkgs.visualstudio.com/_packaging/Packaging/nuget/v3/index.json
+    nuget install Microsoft.VisualStudio.Services.Packaging.NuGet.PushTool
+    tools\VstsNuGetPush.exe ***.nupkg -feed ***/index.json
