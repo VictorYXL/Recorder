@@ -1,0 +1,19 @@
+Install twine:
+    pip install twine
+
+Build whl:
+    python setup.py sdist bdist_wheel
+
+Create ~/.pypirc in Linux or C:/Users/[User]/.pypirc:
+    [distutils]
+    index-servers =
+    pypi
+    Other servers
+
+    [pypi]
+    repository: <repository-url>
+    username: <username>
+    password: <password>
+
+distribute:
+    twine upload (-r server name) dist/*

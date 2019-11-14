@@ -20,5 +20,8 @@ Face组内：
     https://msrasia.visualstudio.com/FaceNExT/_packaging?_a=feed&feed=Official
     选择Package，Connect to feed
     对小的nuget包，nuget.exe push -Source https://****.json(URL) -ApiKey AzureDevOps XXXX.nupkg
-    对于大的negut包 VstsNuGetPush.exe XXXX.nupkg -feed https://****.json(URL) 
-    (参考https://www.1eswiki.com/wiki/VstsNuGetPush.exe)
+    推送超过500M的Nuget包:
+    内部工具 https://www.1eswiki.com/wiki/VstsNuGetPush.exe
+    nuget sources add -name 1esPackaging -source https://1essharedassets.pkgs.visualstudio.com/_packaging/Packaging/nuget/v3/index.json
+    nuget install Microsoft.VisualStudio.Services.Packaging.NuGet.PushTool
+    tools\VstsNuGetPush.exe ***.nupkg -feed ***/index.json

@@ -1,0 +1,3 @@
+PC name: MININT-GEH0RT6
+域: fareast.corp.microsoft.com
+PC full name: MININT-GEH0RT6.fareast.corp.microsoft.com
