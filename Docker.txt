@@ -1,0 +1,10 @@
+查看容器:
+    docker ps
+启动容器:
+    docker run image_name
+启动交互式容器:
+    docker run -it -v local_path:/mnt_path/ --entrypoint /bin/bash  image_name
+进入正在运行的容器:
+    docker exec -it container_id /bin/bash
+向容器复制文件:
+    docker cp local_file container_id:/mnt_path/

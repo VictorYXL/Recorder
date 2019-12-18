@@ -1,0 +1,3 @@
+An attempt was made to access a socket in a way forbidden by its access perm：
+    可能是由于端口被占用。netstat -aon|findstr "xxx" 查看端口
+POST请求可以异步，GET请求只能同步。

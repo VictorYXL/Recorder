@@ -1,0 +1,25 @@
+发布():
+    Install twine:
+        pip install twine
+    Build whl:
+        python setup.py sdist bdist_wheel
+    Create ~/.pypirc in Linux or C:/Users/[User]/.pypirc:
+        [distutils]
+        index-servers =
+        pypi
+        Other servers
+        [servers]
+        repository: <repository-url> 
+        (Research.FaceSDK https://msrasia.pkgs.visualstudio.com/_packaging/Research.FaceSDK/pypi/upload)
+        username: <username>
+        password: <password>
+    distribute:
+        twine upload (-r server name) dist/*
+
+单次安装指定源:
+    pip install xxx -i xxx(https://pypi.python.org/pypi)
+配置默认源:
+    pip config set global.index-url xxx(https://pypi.python.org/pypi)
+   
+ 
+ 

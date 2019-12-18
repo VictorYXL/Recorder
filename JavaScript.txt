@@ -1,0 +1,31 @@
+获取访问页面url的主机名和端口:
+    window.location.host; (xxx.xxx.xxx.xxx:xxxx)
+Json格式显示:
+    JSON.stringify(JSON.parse(string), null, 2);
+获取html控件:
+    document.getElementById("target_id"); 
+onclick回调函数:
+    xxx.onclick = function(i);
+    在执行时，i会使用onclick时值而非当前值
+    for (var i = 1; i <= n; i++)
+        xxx.onclick = function(i);
+    点击后，执行function(n+1)
+匿名函数:
+    (xxx)(i)
+闭包:
+    function(n) { return function(){ xxx } }; // xxx中可以访问n
+回调函数 + 匿名函数 + 闭包实现正确操作关联:
+    for (var i = 1; i <= n; i++)
+    {
+        xxx.onclick = 
+        ( 
+            function(n) 
+            { 
+                return function()
+                { 
+                    xxx(n);
+                }
+            }
+        )(i);
+    }
+    点击后，执行function(i)
